@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+}
+
+nav{
+  margin-bottom: 0.3cm;
+  background-color: white;
+}
+  
+.navbar-nav a{
+  font-weight: bold;
+  color: black;
+  padding-left: 50px;
+}
+  
+.navbar-nav a:hover{
+  color: #0990A7;
+}
+
+.navbar-toggler {
+  background-image: url(images/menu.png);
+  background-size: 40px 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0.8;
+}
+
+  
+.collapse-text a{
+      padding-right: 10px;
+      text-align: right;
+}
+
+/* Header Section */
+.header-section {
+    height: 450px;
+    width: 100%;
+    background-image: linear-gradient(rgba(3, 64, 80, 0.7), rgba(3, 64, 80, 0.7)), url(images/about\ us.png);  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.title{
+  width: 100%;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-section h1 {
+  font-size: 55px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.header-section hr {
+    width: 15%;
+    height: 5px;
+    border: 0 none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:white;
+    color: white;
+}
+
+/* Text Section 1 */
+.text-section {
+    padding: 20px 0;
+}
+.text-section h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* Image Section 1 and Image Section 2 */
+.image-section {
+    padding: 10px 0 100px 0;
+}
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: -1;
+    width: 100%;
+    height: auto;
+    background-color: #005f70;
+    color: #fff;
+}
+  
+  .Links p a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .Links p a:hover{
+    color: #0990A7;
+  }
+  
+  .Contact i{
+    font-size: 18px;
+  }
+  
+  .Contact a{
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .Social{
+    text-align: center;
+  }
+  
+  .Social i{
+    font-size: 22px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .Social i:hover{
+    color: #0990A7;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) { /* tablet devices */
+    .header-section h1{
+        font-size: 45px;
+    }
+  
+    .image-section img{
+      padding: 20px;
+    }
+    
+  }
+  @media (max-width: 767px) {
+    .header-section h1{
+        font-size: 40px;
+    }
+    .text-section{
+        padding-left: 10px;
+    }
+  
+    .image-section img{
+      padding: 20px;
+    }
+    
+    .Social{
+        text-align:left;
+    }
+    
+  }

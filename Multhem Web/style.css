@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+nav {
+  margin-bottom: 0.3cm;
+  background-color: white;
+}
+
+.navbar-nav a {
+  font-weight: bold;
+  color: black;
+  padding-left: 50px;
+}
+
+.navbar-nav a:hover {
+  color: #0990a7;
+}
+
+.navbar-toggler {
+  background-image: url(images/menu.png);
+  background-size: 40px 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0.8;
+}
+
+.collapse-text a {
+  padding-right: 10px;
+  text-align: right;
+}
+
+/* header */
+
+.header {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+.header-row {
+    height: 450px;
+    width: 100%;
+    background-image: linear-gradient(rgba(3, 64, 80, 0.7), rgba(3, 64, 80, 0.7)),
+      url(images/Picture-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  #Header .text-center {
+    width: 100%;
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #Header .text-center h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  #Header .header-row h3 {
+    font-size: 55px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  
+  #Header .text-center hr {
+    width: 20%;
+    height: 5px;
+    border: 0 none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: white;
+  }
+
+  /* Heading */
+.Heading{
+  height: 100%;
+  width: 100%;
+  margin-bottom: 250px;
+}
+#Heading .top-text {
+    height: 20px;
+    min-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 280%);
+  }
+  
+#Heading .top-text p {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  /* Cards */
+
+.card-boxes {
+    height: 100%;
+    width: 100%;
+    overflow:auto;
+    position: relative;
+    
+}
+
+.card {
+  position: relative;
+  width: 20%;
+  height: auto;
+  margin: 20px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.card-img-overlay {
+  background-image: linear-gradient(rgba(3, 64, 80, 0.7), rgba(3, 64, 80, 0.7));
+}
+
+.card-colour {
+  color: white;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  width: 100%;
+  height: auto;
+  background-color: #005f70;
+  color: #fff;
+}
+
+.Links p a{
+  text-decoration: none;
+  color: white;
+}
+
+.Links p a:hover{
+  color: #0990A7;
+}
+
+.Contact i{
+  font-size: 18px;
+}
+
+.Contact a{
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
+
+.Social{
+  text-align: center;
+}
+
+.Social i{
+  font-size: 22px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.Social i:hover{
+  color: #0990A7;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* tablet devices */
+
+  #Header .header-row h3 {
+    font-size: 40px;
+  }
+  #Header .text-center h1 {
+    font-size: 25px;
+  }
+  #Heading .text-center {
+    max-height: 80px;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .card-text {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  #Header .header-row h3 {
+    font-size: 30px;
+  }
+  #Header .text-center h1 {
+    font-size: 30px;
+  }
+  #Heading .text-center {
+    max-height: 50px;
+  }
+  #Heading .text-center p {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .card-boxes{
+    padding-top: 250px;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .card-text {
+    font-size: 14px;
+  }
+  .Social {
+    text-align: left;
+  }
+}
