@@ -380,7 +380,7 @@
   
    function isValid() {
     if (validateForm()){
-      const timeout = setTimeout(confirmation,2000);
+      const timeout = setTimeout(confirmation,1000);
       return true;
     }
     return false;
