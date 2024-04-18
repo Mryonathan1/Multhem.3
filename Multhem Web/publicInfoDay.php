@@ -61,7 +61,7 @@
         $query = "SELECT email FROM publicInfoDay2024 WHERE email ='$email'"; 
         $result = mysqli_query($dbconnect, $query); 
 
-        $id_query = "SELECT MAX(publicInfoDay24_ID) FROM publicInfoDay2024;"
+        $id_query = "SELECT MAX(publicInfoDay24_ID) FROM publicInfoDay2024;";
         $id = mysqli_query($dbconnect, $id_query);
         $id_new = $id + 1;
         
@@ -217,7 +217,7 @@
             <div class="col-12 col-md-8 col-lg-5">
               <div class="card text-center">
                 <div class="card-body m-3">
-                  <img src="LoadingGIF.gif" alt="Tick icon" style="width: 100px;" class="mb-2">
+                  <img src="images/LoadingGIF.gif" alt="Tick icon" style="width: 100px;" class="mb-2">
                   <h3 class="card-title">Submitting...</h3>
                 </div>
               </div>
@@ -385,7 +385,7 @@
   
    function isValid() {
     if (validateForm()){
-      const timeout = setTimeout(confirmation,2000);
+      const timeout = setTimeout(confirmation,500);
       return true;
     }
     return false;
