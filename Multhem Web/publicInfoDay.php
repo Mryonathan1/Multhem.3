@@ -61,9 +61,12 @@
         $query = "SELECT email FROM publicInfoDay2024 WHERE email ='$email'"; 
         $result = mysqli_query($dbconnect, $query); 
 
-        $id_query = "SELECT MAX(publicInfoDay24_ID) FROM publicInfoDay2024;";
-        $id = mysqli_query($dbconnect, $id_query);
-        $id_new = $id + 1;
+        $id_query = "SELECT MAX(publicInfoDay24_ID) AS max_id FROM publicInfoDay2024;";
+        $id_result = mysqli_query($dbconnect, $id_query);
+        $row = mysqli_fetch_assoc($id_result);
+        $max_id = $row['max_id'];
+        $id_new = $max_id + 1;
+
         
         if(mysqli_num_rows($result) > 0){
           
