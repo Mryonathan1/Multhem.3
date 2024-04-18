@@ -46,8 +46,9 @@
                     <p>
                         Dear $fname,
                         <br><br>
-                        We have noticed you have tried to resgister using this email. This email has already been registerred previously.
-                        If you have any questions or need assistance, please don't hesitate to contact us at info@multhem.eu. 
+                        We have detected an attempt to register using this email address, 
+                        which appears to have been previously registered.If you have any questions or need assistance, 
+                        please don't hesitate to contact us at info@multhem.eu. 
                         <br><br>
                         Best regards,
                         <br><br>
@@ -59,20 +60,26 @@
 
         $query = "SELECT email FROM publicInfoDay2024 WHERE email ='$email'"; 
         $result = mysqli_query($dbconnect, $query); 
+
+        $id_query = "SELECT MAX(publicInfoDay24_ID) FROM publicInfoDay2024;"
+        $id = mysqli_query($dbconnect, $id_query);
+        $id_new = $id + 1;
         
         if(mysqli_num_rows($result) > 0){
           
           sendEmail($email,$msg2);
           
-          header('location:index.html');
+          header('location:confirmation2.html');
 
         } else {
-          $sql = "INSERT INTO `publicInfoDay2024` ( `firstName`, `lastName`, `email`, `jobTitle`, `OrgSize`, `OrgLocation`, `OrgCategory`) 
-          VALUES ( '$fname', '$lname', '$email', '$job', '$orgSize', '$orgPlace', '$orgDesc');";
+          $sql = "INSERT INTO `publicInfoDay2024` (`publicInfoDay24_ID`, `firstName`, `lastName`, `email`, `jobTitle`, `OrgSize`, `OrgLocation`, `OrgCategory`) 
+          VALUES ('$id_new', '$fname', '$lname', '$email', '$job', '$orgSize', '$orgPlace', '$orgDesc');";
 
           if (mysqli_query($dbconnect, $sql)) {
 
             sendEmail($email, $msg1);
+
+            header('location:confirmation.html');
             
           } else {
               echo "Error: " . $sql . "<br>" . mysqli_error($dbconnect);
@@ -202,7 +209,7 @@
     </form>
   </section>
   
-  <!-- Confirmation section -->
+  <!-- Loading Section -->
   <section class="confirmation-off" id="confirmation">
       <div class="popup-background">
         <div class="popup">
@@ -210,10 +217,8 @@
             <div class="col-12 col-md-8 col-lg-5">
               <div class="card text-center">
                 <div class="card-body m-3">
-                  <img src="images/check.png" alt="Tick icon" style="width: 100px;" class="mb-2">
-                  <h2 class="card-title">Success!</h2>
-                  <p class="card-text">Your registration form has been submitted. <br>You will receive a confirmation email shortly.<br> Thank you for registering. </p>
-                  <a href="index.html"><button type="button" class="btn btn-primary">Return to The Home Page</button></a>
+                  <img src="LoadingGIF.gif" alt="Tick icon" style="width: 100px;" class="mb-2">
+                  <h3 class="card-title">Submitting...</h3>
                 </div>
               </div>
             </div>
