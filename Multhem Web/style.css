@@ -130,7 +130,7 @@ nav {
 .Heading{
   height: 100%;
   width: 100%;
-  margin-bottom: 210px;
+  margin-bottom: 230px;
 }
 #Heading .top-text {
     height: 20px;
@@ -161,7 +161,7 @@ nav {
   height: auto;
   margin: 20px;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .card-img-overlay {
