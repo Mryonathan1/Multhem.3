@@ -1,6 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.news-item .img-fluid {
+  border: 5px solid #000; 
+  border-radius: 8px;
+  border-color: #0990A7;
+  
+}
+.news-link {
+  font-weight: bold;
+  color: #0990A7;
+  
+}
+.news-title{
+margin-bottom:20px ;
+}
+.read-more {
+  border: 2px solid #0990A7;
+  padding: 5px 5px;
+  margin-top: 0px;
+  color:#0990A7;
+  text-decoration: none; /* Remove underline */
+}
+
+.read-more:hover {
+  background-color: #0990A7;
+  color: black;
+}
+
 
 * {
   margin: 0;
@@ -103,7 +130,7 @@ nav {
 .Heading{
   height: 100%;
   width: 100%;
-  margin-bottom: 250px;
+  margin-bottom: 230px;
 }
 #Heading .top-text {
     height: 20px;
@@ -134,7 +161,7 @@ nav {
   height: auto;
   margin: 20px;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .card-img-overlay {
@@ -234,4 +261,5 @@ nav {
   .Social {
     text-align: left;
   }
+  
 }
